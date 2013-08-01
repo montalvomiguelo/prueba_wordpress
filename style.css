@@ -1,0 +1,329 @@
+/*
+Theme Name: Prueba Terrabionic
+Theme URI: http://wordpress.org/
+Description: theme de prueba
+Version: 1.0
+Author: Ubaldo Miguel 
+Author URI: http://github.com/imontalvomiguel
+Tags: Gris, Columnas, Responsive, mobile, genial
+
+*/
+
+
+
+*{margin:0; padding:0;}
+
+/* ================lateral================== */
+
+aside{
+	display:inline-block;
+	margin-top:25px;
+	vertical-align:top;
+	width:30%;
+}
+aside a , footer #menufooter  li  a, section a{
+	color:#808285;
+	text-decoration:none;
+}
+
+aside img{
+	display:block;
+	height:auto;
+	margin:15px 0;
+	width:100%;
+}
+
+aside .articulo h2 .tituloart, aside .articulo h3 .tituloart , section .articulo h2 .tituloart{
+	color:#4c4c4c;
+}
+aside .articulo p, section .articulo p{
+	text-align:justify;
+}
+/*----------------------------------------------*/
+
+body{
+	color:#4c4c4c;
+	font-family:"PT Sans",Arial, Helvetica, sans-serif;
+	font-size:16px;
+	margin:0;
+	padding:0;
+}
+
+/* ================footer================== */
+
+footer{ 
+	border-top:2px solid #ff8100;
+	height:90px;
+	margin-top:25px;
+}
+
+footer p{
+	color:#808285;
+	float:left;
+	margin:40px 0px 0px 20px;
+}
+
+footer #menufooter{
+	float:right;
+	margin:40px 20px 0px 0px;	
+}
+
+footer #menufooter  li {
+	display:inline-block;
+	padding:0 20px;
+}
+
+footer #menufooter  li  a:hover{
+	color:#333333;
+}
+
+/* ================header================== */
+
+header h1{
+	background:url(images/logo.png) no-repeat top left;
+	/*display:inline-block;*/
+	float:left;
+	height:117px;
+	margin:20px 0px 15px 10px;
+	/*margin:1.3em 0 0.94em 0.63em;*/
+	width:120px;
+}
+
+header h1 a{
+	display:block;
+	height:117px;
+	text-decoration:none;
+	width:120px;
+}
+
+header h1 a span{
+	visibility:hidden;
+}
+
+header h2{
+	/*display:inline-block;*/
+	float:left;
+	font-weight:normal;
+	margin:40px 0px 0px 30px;
+	/*margin:2em 0 0 1.9em;*/
+	/*vertical-align:top;*/
+}
+
+header #busqueda{
+	/*display:inline-block;*/
+	float:right;
+	height:22px;
+	margin:85px 15px 0px 0px;
+	/*margin:85px 0px 0px 433px;*/
+	width:134px;
+	/*vertical-align:top;*/
+}
+
+header #busqueda #btnbuscar{
+	display:inline-block;
+	height:22px;
+	width:22px;
+}
+
+header #busqueda #txtbuscar{
+	border:1px solid #999999;
+	color:#999999;
+	display:inline-block;
+	height:20px;
+	vertical-align:top;
+	width:110px;
+}
+
+header #busqueda #btnbuscar{
+	display:inline-block;
+	height:22px;
+	width:22px;
+}
+
+/* ================navegación================== */
+
+header #topmenu ul{
+	background-color:#000;
+	clear:both;
+	list-style:none;
+	width:100%;
+}
+
+header #topmenu ul li{
+	display:inline-block;
+	height:30px;
+}
+
+header #topmenu ul li a{
+	color:#fff;
+	display:block;
+	height:20px;
+	padding:5px 20px;
+	text-decoration:none;
+
+}
+
+header #topmenu ul li a:hover,#topmenu ul li  .active{
+	background-color:#FFF;
+	color:#000;
+}
+
+/* ================seccion articulos================== */
+
+section{
+	display:inline-block;
+	margin-right:2%;
+	margin-top:25px;
+	width:68%;
+}
+
+
+section .articulo, aside .articulo{
+	border-top:2px solid #ff8100;
+	padding:15px;
+}
+
+section .articulo h2, aside .articulo h2, aside .articulo h3{
+	font-weight:normal;
+}
+
+section .articulo  img{
+	float:left; 
+	height:auto;
+	margin:15px 10px 0px 0;
+	width:25%;  
+	
+}
+
+section .articulo p{
+	margin-top:15px;
+}
+
+
+
+/*--------------------------------------------------*/
+#contenedor{
+	background-color:#f1f2f2;
+	border-left:2px solid #e9e9e9; 
+	border-right:2px solid #e9e9e9; 
+	margin:0 auto;
+	max-width:940px;
+}
+
+/*==============================================================media query para TABLETA===============================================*/
+
+
+@media screen and (max-width:728px){
+	
+	/*====================lateral====================*/	
+	aside{
+		width:100%;
+	}
+
+	aside .articulo img{
+		float:left;
+		height:auto;
+		margin: 15px 10px 0px 0px;
+		width:30%;
+	}
+
+	aside .articulo p {
+		margin: 15px 0px 0px 0px;
+	}
+	
+	/*====================footer====================*/
+	footer{
+		height:auto;
+		text-align:center;
+	}
+		
+	footer p, footer #menufooter{
+		display:block;
+		margin:0;
+		width:100%;
+	}
+		
+	footer #menufooter  li {
+		padding:0 10px;
+	}
+	
+	/*======Cabecera=========*/
+	
+	header h1{
+		margin-bottom:0px;
+	}
+
+	header #busqueda{
+		clear:both;
+		margin:0 15px 15px 0; 
+		padding:0;
+		text-align:right;
+		width:50%;
+	}
+
+	header #busqueda #txtbuscar{
+		width:70%;
+	}
+	
+	/*====================sección articulos====================*/	
+	section{
+		width:100%;
+	}
+
+	section .articulo  img{
+		float:left; 
+		height:auto;
+		margin:15px 10px 0px 0;
+		width:30%;  
+		
+	}
+}
+
+
+/*================================================media query para MOVIL===========================================================*/
+
+
+@media screen and (max-width:480px){
+	
+	/*======lateral=========*/
+	
+	aside .articulo img, section .articulo  img{
+		clear:both;
+		height:auto;
+		margin: 15px 0px ;
+		width:100%;
+	}
+	
+	/*======footer=========*/	
+		
+	footer #menufooter  li {
+		padding:0 5px;
+	}
+	
+	/*======Cabecera=========*/
+	
+	header{
+		text-align:center;	
+	}
+	
+	header h1{
+		margin:5px;	
+	}
+	header h2{
+		clear:both;
+		float:none;
+		margin:0;
+	}
+	
+	header #busqueda {
+		float:none;
+		margin:0 0 15px 0;
+		text-align:center;	
+		width:100%;
+	}
+	/*
+	header #topmenu  ul li{
+		width:100%;
+	}
+	*/
+}
