@@ -1,16 +1,12 @@
 <!doctype html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<title><?php bloginfo('name');?><?php wp_title();?></title>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css" />
-	
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
-	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/meanmenu.css" media="all" />
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/themes/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/themes/light/light.css" type="text/css" media="screen" />
@@ -25,8 +21,8 @@
 <body>
 <div id="contenedor">
 	<header>
-		<h1><a href="#"><span>Terrabionic Agencia Digital</span></a></h1>
-		<h2>Prueba Terrabionic</h2>
+		<h1><a href="<?php bloginfo ('url');?>"><span><?php bloginfo (name);?></span></a></h1>
+		<h2><?php bloginfo('description');?></h2>
 		<form id="busqueda" method="post" >
 			<input type="text" name="busqueda" id="txtbuscar" value="Buscar"><!--
 		 --><input type="image" src="images/lupa.gif" id="btnbuscar" alt="buscar" title="Buscar" >
