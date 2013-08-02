@@ -211,10 +211,39 @@ section .articulo  img{
 	
 }
 
+section .articulo .metadatos small{
+	background:#ff8100;
+	border-radius:5px;
+	color:#F1F2F2;
+	padding:2px;
+}
+
+section .articulo .metadatos span{
+	background-color:#4C4C4C;
+	border-radius:5px;
+	float:right;	
+}
+section .articulo .metadatos span a{
+	color:#F1F2F2;
+	display:block;
+	padding:2px;
+}
+
 section .articulo p{
 	margin-top:0px;
 }
 
+section  .navegacion_posts{
+	padding:0 15px;
+}
+
+section  .navegacion_posts .anteriores{
+	float:left;
+}
+
+section  .navegacion_posts .siguientes{
+	float:right;
+}
 
 
 /*--------------------------------------------------*/
@@ -311,7 +340,10 @@ section .articulo p{
 	}
 	
 	/*======footer=========*/	
-		
+	footer{
+		margin:0;
+	}
+	
 	footer #menufooter  li {
 		padding:0 5px;
 	}

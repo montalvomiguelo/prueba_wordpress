@@ -48,6 +48,7 @@
 	<section>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="articulo">
+			<p class="metadatos"><small><?php the_time( 'j M y' ); ?> Por: <?php the_author(); ?></small><span><?php comments_popup_link( 'Deje un comentario', '1 comentario', '% comentarios' ); ?></span></p>
 			<h2><a href="<?php the_permalink() ?>" class="tituloart"><?php the_title(); ?></a></h2>
 			<?php the_post_thumbnail('portada-thumb'); ?>
 			<?php the_content('Continuar leyendo'); ?>
@@ -55,7 +56,10 @@
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>	
-	
+	<div class="navegacion_posts">
+		<div class="anteriores"><?php next_posts_link( 'Entradas anteriores' ); ?></div>
+		<div class="siguientes"><?php previous_posts_link( 'Entradas siguientes' ); ?></div>
+	</div>
 	</section><!--Fin de seccion artículos
  --><aside>
 			<ul class="articulo">
