@@ -58,9 +58,9 @@
 	
 	</section><!--Fin de seccion artículos
  --><aside>
-			<article class="articulo">
-								<?php dynamic_sidebar( 'Right Hand Sidebar' ); ?>
-			</article>
+			<ul class="articulo">
+				<?php dynamic_sidebar( 'Right Hand Sidebar' ); ?>
+			</ul>
 	</aside><!--Fin Lateral-->
 	<footer>
 		<p>Todos los derechos reservados © 2011</p><!--

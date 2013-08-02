@@ -33,11 +33,24 @@ aside img{
 	width:100%;
 }
 
-aside .articulo h2 .tituloart, aside .articulo h3 .tituloart , section .articulo h2 .tituloart{
+aside  ul  {
+	list-style:none;
+}
+
+
+
+aside .articulo .widget h2, section .articulo h2 .tituloart{
 	color:#4c4c4c;
+	font-weight:normal;
+	
 }
 aside .articulo p, section .articulo p{
 	text-align:justify;
+}
+
+aside .articulo .widget{
+	padding-bottom:15px;
+	
 }
 /*----------------------------------------------*/
 
@@ -147,6 +160,7 @@ header #topmenu ul{
 	clear:both;
 	list-style:none;
 	width:100%;
+	font-size:0px;
 }
 
 header #topmenu ul li{
@@ -160,6 +174,7 @@ header #topmenu ul li a{
 	height:20px;
 	padding:5px 20px;
 	text-decoration:none;
+	font-size:16px;
 
 }
 
@@ -183,7 +198,7 @@ section .articulo, aside .articulo{
 	padding:15px;
 }
 
-section .articulo h2, aside .articulo h2, aside .articulo h3{
+section .articulo h2{
 	font-weight:normal;
 	margin-bottom:15px;
 }
