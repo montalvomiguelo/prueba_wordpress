@@ -27,7 +27,9 @@
 			<input type="text" name="busqueda" id="txtbuscar" value="Buscar"><!--
 		 --><input type="image" src="<?php bloginfo('template_directory'); ?>/images/lupa.gif" id="btnbuscar" alt="buscar" title="Buscar" >
 		</form>
-		<nav id="topmenu"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></nav><!--menu superior-->
+		<nav id="topmenu">
+			<?php wp_nav_menu( array( 'theme_location' => 'superior' ) ); ?>
+		</nav><!--menu superior-->
 	</header><!--Fin cabecera-->
 	<div class="slider-wrapper theme-bar">
             <div id="slider" class="nivoSlider">
@@ -48,7 +50,7 @@
 	<section>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="articulo">
-			<p class="metadatos"><small><?php the_time( 'j M y' ); ?> Por: <?php the_author(); ?></small><span><?php comments_popup_link( 'Deje un comentario', '1 comentario', '% comentarios' ); ?></span></p>
+			<p class="metadatos"><small><?php the_time( 'j M y' ); ?> Por: <?php the_author(); ?></small><span><?php comments_popup_link( '0 Comentarios', '1 comentario', '% comentarios' ); ?></span></p>
 			<h2><a href="<?php the_permalink() ?>" class="tituloart"><?php the_title(); ?></a></h2>
 			<?php the_post_thumbnail('portada-thumb'); ?>
 			<?php the_content('Continuar leyendo'); ?>
@@ -69,10 +71,7 @@
 	<footer>
 		<p>Todos los derechos reservados © 2011</p><!--
 	 --><ul id="menufooter">
-			<li><a href="#">Home</a>
-			<li><a href="#">Services</a>
-			<li><a href="#">News</a>
-			<li><a href="#">Contact</a>
+			<?php wp_nav_menu( array( 'theme_location' => 'pie' ) ); ?>
 		</ul>
 	</footer><!--Fin de footer-->
 </div><!--Fin contenedor general-->

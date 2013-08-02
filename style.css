@@ -37,8 +37,6 @@ aside  ul  {
 	list-style:none;
 }
 
-
-
 aside .articulo .widget h2, section .articulo h2 .tituloart{
 	color:#4c4c4c;
 	font-weight:normal;
@@ -158,9 +156,9 @@ header #busqueda #btnbuscar{
 header #topmenu ul{
 	background-color:#000;
 	clear:both;
+	font-size:0px;
 	list-style:none;
 	width:100%;
-	font-size:0px;
 }
 
 header #topmenu ul li{
@@ -171,11 +169,10 @@ header #topmenu ul li{
 header #topmenu ul li a{
 	color:#fff;
 	display:block;
+	font-size:16px;
 	height:20px;
 	padding:5px 20px;
 	text-decoration:none;
-	font-size:16px;
-
 }
 
 header #topmenu ul li a:hover,header #topmenu .current-menu-item a{
@@ -279,6 +276,7 @@ section  .navegacion_posts .siguientes{
 	/*====================footer====================*/
 	footer{
 		height:auto;
+		margin:0;
 		text-align:center;
 	}
 		

@@ -2,7 +2,9 @@
 
 
 	
-	register_nav_menu( 'primary', __( 'Primary Menu' ) );
+	register_nav_menu( 'superior', __( 'Menu Superior' ) );
+	
+	register_nav_menu( 'pie', __( 'Menu Footer' ) );
 	
 	add_theme_support( 'post-thumbnails' );
 	
