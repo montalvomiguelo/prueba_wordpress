@@ -23,10 +23,12 @@
 	<header>
 		<h1><a href="<?php bloginfo ('url');?>"><span><?php bloginfo (name);?></span></a></h1>
 		<h2><?php bloginfo('description');?></h2>
-		<form id="busqueda" method="post" >
-			<input type="text" name="busqueda" id="txtbuscar" value="Buscar"><!--
-		 --><input type="image" src="<?php bloginfo('template_directory'); ?>/images/lupa.gif" id="btnbuscar" alt="buscar" title="Buscar" >
+		
+		<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+			<input type="text" value="Buscar" name="s" id="s" />
+			<input type="submit" id="searchsubmit" value="Search" />
 		</form>
+		
 		<nav id="topmenu">
 			<?php wp_nav_menu( array( 'theme_location' => 'superior' ) ); ?>
 		</nav><!--menu superior-->
@@ -50,7 +52,7 @@
 	<section>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="articulo">
-			<p class="metadatos"><small><?php the_time( 'j M y' ); ?> Por: <?php the_author(); ?></small><span><?php comments_popup_link( '0 Comentarios', '1 comentario', '% comentarios' ); ?></span></p>
+			<p class="metadatos"><small><?php the_time( 'j M y' ); ?> Por: <?php the_author(); ?></small><span><?php comments_popup_link( '0 Comentarios', '1 Comentario', '% comentarios' ); ?></span></p>
 			<h2><a href="<?php the_permalink() ?>" class="tituloart"><?php the_title(); ?></a></h2>
 			<?php the_post_thumbnail('portada-thumb'); ?>
 			<?php the_content('Continuar leyendo'); ?>

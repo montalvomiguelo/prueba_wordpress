@@ -120,9 +120,10 @@ header h2{
 	/*vertical-align:top;*/
 }
 
-header #busqueda{
+header #searchform{
 	/*display:inline-block;*/
 	float:right;
+	font-size:0;
 	height:22px;
 	margin:85px 15px 0px 0px;
 	/*margin:85px 0px 0px 433px;*/
@@ -130,26 +131,26 @@ header #busqueda{
 	/*vertical-align:top;*/
 }
 
-header #busqueda #btnbuscar{
+header #searchform #searchsubmit{
+	background:url(images/lupa.gif);
+	border:0;
 	display:inline-block;
+	font-size:0;
+	margin:0;
 	height:22px;
-	width:22px;
+	width:22px;	
 }
 
-header #busqueda #txtbuscar{
+header #searchform #s{
 	border:1px solid #999999;
 	color:#999999;
 	display:inline-block;
+	font-size:16px;
 	height:20px;
 	vertical-align:top;
 	width:110px;
 }
 
-header #busqueda #btnbuscar{
-	display:inline-block;
-	height:22px;
-	width:22px;
-}
 
 /* ================navegación================== */
 

@@ -9,7 +9,7 @@ $(document).ready(function(){
 	//global vars
 	var searchBoxes = $(".text");
 	var searchBox1 = $("#search1");
-	var searchBox2 = $("#txtbuscar");
+	var searchBox2 = $("#s");
 	var searchBox2Default = "Buscar";
 	
 	//Effects for both searchbox
