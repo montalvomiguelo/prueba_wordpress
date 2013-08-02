@@ -297,7 +297,7 @@ section  .navegacion_posts .siguientes{
 		margin-bottom:0px;
 	}
 
-	header #busqueda{
+	header #searchform{
 		clear:both;
 		margin:0 15px 15px 0; 
 		padding:0;
@@ -305,7 +305,7 @@ section  .navegacion_posts .siguientes{
 		width:50%;
 	}
 
-	header #busqueda #txtbuscar{
+	header #searchform #s{
 		width:70%;
 	}
 	
@@ -362,7 +362,7 @@ section  .navegacion_posts .siguientes{
 		margin:0;
 	}
 	
-	header #busqueda {
+	header #searchform {
 		float:none;
 		margin:0 0 15px 0;
 		text-align:center;	
