@@ -2,27 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
-
-	wp_title( '|', true, 'right' );
-
-	// Add the blog name.
-	bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
-
-	?></title>
+	<title><?php bloginfo( 'name' ); wp_title(); ?></title>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css" />
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -69,24 +49,17 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="articulo">
 			<h2><a href="<?php the_permalink() ?>" class="tituloart"><?php the_title(); ?></a></h2>
+			<?php the_post_thumbnail('portada-thumb'); ?>
 			<?php the_content('Continuar leyendo'); ?>
 		</article><!--aritículo 1-->
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>	
+	
 	</section><!--Fin de seccion artículos
  --><aside>
 			<article class="articulo">
-				<h2>Noticias Recientes</h2>
-				<h3><a href="#" class="tituloart">Praesent luctus purus vitae erat feugiat fefeholaoo</a></h3>
-				<a href="#"><img src="images/ultimas-noticias.jpg" alt="ultimas noticias" /></a>
-				<p>Sed lacinia odio at quam dictum ornare. Quisque 
-				placerat massa non nunc tincidunt quis molestie 
-				ligula posuere. Ut purus arcu, hendrerit eget 
-				dignissim at, eleifend sed lorem. Cras tristique 
-				congue vulputate. Nullam gravida sollicitudin 
-				ultricies. Class aptent taciti sociosqu ad …</p>
-				<a href="">continuar leyendo </a>
+								<?php dynamic_sidebar( 'Right Hand Sidebar' ); ?>
 			</article>
 	</aside><!--Fin Lateral-->
 	<footer>

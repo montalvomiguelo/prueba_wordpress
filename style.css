@@ -185,6 +185,7 @@ section .articulo, aside .articulo{
 
 section .articulo h2, aside .articulo h2, aside .articulo h3{
 	font-weight:normal;
+	margin-bottom:15px;
 }
 
 section .articulo  img{
@@ -196,7 +197,7 @@ section .articulo  img{
 }
 
 section .articulo p{
-	margin-top:15px;
+	margin-top:0px;
 }
 
 
@@ -223,12 +224,12 @@ section .articulo p{
 	aside .articulo img{
 		float:left;
 		height:auto;
-		margin: 15px 10px 0px 0px;
+		margin: 0px 10px 0px 0px;
 		width:30%;
 	}
 
 	aside .articulo p {
-		margin: 15px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
 	}
 	
 	/*====================footer====================*/
