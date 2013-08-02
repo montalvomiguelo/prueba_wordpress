@@ -163,7 +163,7 @@ header #topmenu ul li a{
 
 }
 
-header #topmenu ul li a:hover,#topmenu ul li  .active{
+header #topmenu ul li a:hover,header #topmenu .current-menu-item a{
 	background-color:#FFF;
 	color:#000;
 }
@@ -190,7 +190,7 @@ section .articulo h2, aside .articulo h2, aside .articulo h3{
 section .articulo  img{
 	float:left; 
 	height:auto;
-	margin:15px 10px 0px 0;
+	margin:0px 10px 0px 0;
 	width:25%;  
 	
 }

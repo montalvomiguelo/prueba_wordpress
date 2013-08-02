@@ -66,27 +66,14 @@
 		});
 	</script><!--jquery de slider-->
 	<section>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article class="articulo">
-			<h2><a href="#" class="tituloart">Misión y Visión</a></h2>
-			<p>Curabitur vestibulum augue et purus laoreet tempus. Pellentesque habitant morbi tristique senectus et netus et 
-			malesuada fames ac turpis egestas. Nunc eleifend, dui quis fermentum placerat, turpis dolor aliquet neque, non 
-			commodo lacus urna ac velit. Nullam a ante lectus, tincidunt ornare nisl. Class aptent taciti sociosqu ad litora torquent 
-			per conubia nostra, per inceptos himenaeos. Integer venenatis tristique mauris sit amet vulputate. Vivamus eu 
-			elementum ipsum. Suspendisse potenti. Cras luctus, urna non fermentum porta, lorem libero pretium sem, cursus 
-			venenatis elit arcu eget magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+			<h2><a href="<?php the_permalink() ?>" class="tituloart"><?php the_title(); ?></a></h2>
+			<?php the_content('Continuar leyendo'); ?>
 		</article><!--aritículo 1-->
-		
-		<article class="articulo">
-			<h2><a href="#" class="tituloart">Servicios</a></h2>
-			<a href="#"><img src="images/servicios.jpg" alt="servicios"/></a>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate, metus 
-			hendrerit placerat blandit, turpis enim viverra tellus, et facilisis arcu leo ac quam. 
-			Quisque hendrerit ullamcorper augue, non iaculis augue egestas et. Aliquam 
-			pellentesque ipsum et quam molestie tincidunt. In imperdiet, justo nec suscipit 
-			interdum, dui lacus posuere elit, idluctus tellus neque ut purus. Pellentesque ultricies 
-			tempor mi, ut imperdiet nisi bibendum vel. Etiam lorem elit, lacinia sed vesti...</p>
-			<a href="">Continuar leyendo</a>
-		</article><!--aritículo 1-->
+	<?php endwhile; else: ?>
+	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+	<?php endif; ?>	
 	</section><!--Fin de seccion artículos
  --><aside>
 			<article class="articulo">
