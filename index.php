@@ -1,8 +1,28 @@
 <!doctype html>
-<html lang="es">
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<title><?php bloginfo('name');?><?php wp_title();?></title>
+	<title><?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
+
+	wp_title( '|', true, 'right' );
+
+	// Add the blog name.
+	bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		echo " | $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
+
+	?></title>
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css" />
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
@@ -25,15 +45,9 @@
 		<h2><?php bloginfo('description');?></h2>
 		<form id="busqueda" method="post" >
 			<input type="text" name="busqueda" id="txtbuscar" value="Buscar"><!--
-		 --><input type="image" src="images/lupa.gif" id="btnbuscar" alt="buscar" title="Buscar" >
+		 --><input type="image" src="<?php bloginfo('template_directory'); ?>/images/lupa.gif" id="btnbuscar" alt="buscar" title="Buscar" >
 		</form>
-		<nav id="topmenu"><ul>
-			<li><a href="#" class="active">Inicio</a></li><!--
-		 --><li><a href="#">Nosotros</a></li><!--
-		 --><li><a href="#">Servicios</a></li><!--
-		 --><li><a href="#">Noticias</a></li><!--
-		 --><li><a href="#">Contacto</a></li>
-		</ul></nav><!--menu superior-->
+		<nav id="topmenu"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></nav><!--menu superior-->
 	</header><!--Fin cabecera-->
 	<div class="slider-wrapper theme-bar">
             <div id="slider" class="nivoSlider">
@@ -106,7 +120,7 @@
 	});
 </script><!---mobilemenu jquery-->
 
-<script type="text/javascript" src="searchbox.js"></script>	<!--llamada limpiar cajita texto-->
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/searchbox.js"></script>	<!--llamada limpiar cajita texto-->
 
 </body>
 </html>
