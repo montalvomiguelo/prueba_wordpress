@@ -243,6 +243,14 @@ section  .navegacion_posts .siguientes{
 	float:right;
 }
 
+section  .navegacion_posts .anteriores a{
+	background-color:#000;
+	border-radius:5px;
+	color:#FF8100;
+	display:block;
+	padding:2px;
+}
+
 
 /*--------------------------------------------------*/
 #contenedor{

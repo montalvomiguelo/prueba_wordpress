@@ -2,11 +2,13 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title><?php bloginfo( 'name' ); wp_title(); ?></title>
+	
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/normalize.css" />
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/meanmenu.css" media="all" />
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/themes/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/themes/light/light.css" type="text/css" media="screen" />
@@ -72,9 +74,9 @@
 	</aside><!--Fin Lateral-->
 	<footer>
 		<p>Todos los derechos reservados © 2011</p><!--
-	 --><ul id="menufooter">
+	 --><div id="menufooter">
 			<?php wp_nav_menu( array( 'theme_location' => 'pie' ) ); ?>
-		</ul>
+		</div>
 	</footer><!--Fin de footer-->
 </div><!--Fin contenedor general-->
 
