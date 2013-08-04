@@ -161,7 +161,7 @@ header #searchform #searchsubmit{
 	font-family: "untitled-font-1";
 	font-size:16px;
 	height:22px;
-	margin:0;
+	vertical-align:baseline;
 	width:22px;	
 }
 
@@ -225,6 +225,7 @@ section .articulo  img{
 	
 }
 
+
 section .articulo .metadatos small{
 	background:#ff8100;
 	border-radius:5px;
@@ -236,6 +237,7 @@ section .articulo .metadatos span{
 	background-color:#4C4C4C;
 	border-radius:5px;
 	float:right;	
+	position:relative;
 }
 section .articulo .metadatos span a{
 	color:#F1F2F2;
@@ -243,12 +245,25 @@ section .articulo .metadatos span a{
 	padding:2px;
 }
 
+section .articulo .metadatos span:after{
+	border-left: 2.5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #4C4C4C;
+	content: "";
+	left:20px;
+	position:absolute;
+	top:100%;
+}
+
 section .articulo p{
 	margin-top:0px;
 }
 
 section  #navegacion_posts{
+	
+	
 	padding:0 15px;
+	
 }
 
 section  #navegacion_posts #anteriores{
@@ -258,9 +273,10 @@ section  #navegacion_posts #anteriores{
 section  #navegacion_posts #anteriores a:before
 {
 	color:#4c4c4c;
-	content: "a ";
+	content: "a";
 	font-family: "untitled-font-1";
 	font-size:.9em;		
+	margin-right:5px;
 }
 
 section  #navegacion_posts #siguientes{
@@ -270,9 +286,10 @@ section  #navegacion_posts #siguientes{
 section  #navegacion_posts #siguientes a:after
 {
 	color:#4c4c4c;
-	content: " b";
+	content: "b";
 	font-family: "untitled-font-1";
 	font-size:.9em;		
+	margin-left:5px;
 }
 
 /*--------------------------------------------------*/
