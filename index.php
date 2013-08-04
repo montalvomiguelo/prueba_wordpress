@@ -23,12 +23,12 @@
 <body>
 <div id="contenedor">
 	<header>
-		<h1><a href="<?php bloginfo ('url');?>"><span><?php bloginfo (name);?></span></a></h1>
+		<h1><a href="<?php bloginfo ('url');?>"><span><?php bloginfo ('name');?></span></a></h1>
 		<h2><?php bloginfo('description');?></h2>
 		
 		<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 			<input type="text" value="Buscar" name="s" id="s" />
-			<input type="submit" id="searchsubmit" value="Search" />
+			<input type="submit" id="searchsubmit" value="c" />
 		</form>
 		
 		<nav id="topmenu">
@@ -62,9 +62,9 @@
 	<?php endwhile; else: ?>
 	<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>	
-	<div class="navegacion_posts">
-		<div class="anteriores"><?php next_posts_link( 'Entradas anteriores' ); ?></div>
-		<div class="siguientes"><?php previous_posts_link( 'Entradas siguientes' ); ?></div>
+	<div id="navegacion_posts">
+		<div id="anteriores"><?php next_posts_link( 'Entradas anteriores' ); ?></div>
+		<div id="siguientes"><?php previous_posts_link( 'Entradas siguientes' ); ?></div>
 	</div>
 	</section><!--Fin de seccion artículos
  --><aside>

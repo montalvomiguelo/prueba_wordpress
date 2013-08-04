@@ -10,6 +10,17 @@ Tags: Gris, Columnas, Responsive, mobile, genial
 */
 
 
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("fonts/untitled-font-1.eot");
+  src:url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-1.ttf") format("truetype"),
+    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg"),
+    url("fonts/untitled-font-1.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 *{margin:0; padding:0;}
 
@@ -131,16 +142,6 @@ header #searchform{
 	/*vertical-align:top;*/
 }
 
-header #searchform #searchsubmit{
-	background:url(images/lupa.gif);
-	border:0;
-	display:inline-block;
-	font-size:0;
-	margin:0;
-	height:22px;
-	width:22px;	
-}
-
 header #searchform #s{
 	border:1px solid #999999;
 	color:#999999;
@@ -150,6 +151,21 @@ header #searchform #s{
 	vertical-align:top;
 	width:110px;
 }
+
+
+header #searchform #searchsubmit{
+	
+	border:1px solid #999999;
+	color:#4c4c4c;
+	display:inline-block;
+	font-family: "untitled-font-1";
+	font-size:16px;
+	height:22px;
+	margin:0;
+	width:22px;	
+}
+
+
 
 
 /* ================navegación================== */
@@ -231,26 +247,33 @@ section .articulo p{
 	margin-top:0px;
 }
 
-section  .navegacion_posts{
+section  #navegacion_posts{
 	padding:0 15px;
 }
 
-section  .navegacion_posts .anteriores{
+section  #navegacion_posts #anteriores{
 	float:left;
 }
 
-section  .navegacion_posts .siguientes{
+section  #navegacion_posts #anteriores a:before
+{
+	color:#4c4c4c;
+	content: "a ";
+	font-family: "untitled-font-1";
+	font-size:.9em;		
+}
+
+section  #navegacion_posts #siguientes{
 	float:right;
 }
 
-section  .navegacion_posts .anteriores a{
-	background-color:#000;
-	border-radius:5px;
-	color:#FF8100;
-	display:block;
-	padding:2px;
+section  #navegacion_posts #siguientes a:after
+{
+	color:#4c4c4c;
+	content: " b";
+	font-family: "untitled-font-1";
+	font-size:.9em;		
 }
-
 
 /*--------------------------------------------------*/
 #contenedor{
